@@ -45,7 +45,7 @@ function App() {
     <div className="site-shell">
       <header className="site-header">
         <a className="brand" href="#home" onClick={closeMenu} aria-label="Handayani Course - kembali ke beranda">
-          <img src="/logo.jpeg" alt="Logo Handayani Course" />
+          <img src={`${import.meta.env.BASE_URL}logo.jpeg`} alt="Logo Handayani Course" />
           <span>Handayani <strong>Course</strong></span>
         </a>
         <button className="menu-toggle" type="button" onClick={() => setMenuOpen(!menuOpen)} aria-expanded={menuOpen} aria-label="Buka menu navigasi">
@@ -118,7 +118,7 @@ function App() {
         <section className="section-wrap register-section" id="daftar"><div className="register-panel"><div className="register-copy"><p className="eyebrow">Mulai bersama</p><h2>Siap menemani<br /><em>langkah kecilnya?</em></h2><p>Isi formulir singkat ini. Tim Handayani akan menghubungi orang tua untuk membantu memilih program dan jadwal yang sesuai.</p><div className="register-points"><span>✓ Tidak perlu langsung memutuskan</span><span>✓ Konsultasi kebutuhan awal</span></div></div><form className="registration-form" onSubmit={handleSubmit}><label>Nama orang tua<input name="parent" placeholder="Contoh: Ibu Sari" required /></label><label>Nama / inisial anak<input name="child" placeholder="Contoh: Adit" required /></label><div className="form-row"><label>Kelas<select name="grade" defaultValue="" required><option value="" disabled>Pilih kelas</option><option>1 SD</option><option>2 SD</option><option>3 SD</option><option>4 SD</option><option>5 SD</option><option>6 SD</option></select></label><label>No. WhatsApp<input name="phone" type="tel" placeholder="08xxxxxxxxxx" required /></label></div><label>Mata pelajaran yang diminati<select name="subject" defaultValue="" required><option value="" disabled>Pilih mata pelajaran</option><option>Bahasa Indonesia</option><option>Bahasa Inggris</option><option>Matematika</option></select></label><label className="consent"><input type="checkbox" required /> Saya menyetujui tim menghubungi saya mengenai layanan Handayani Course.</label><button className="button button-primary form-button" type="submit">Kirim pendaftaran <span>↗</span></button>{submitted && <p className="success-message" role="status">Terima kasih. Data awal sudah tercatat di halaman ini.</p>}</form></div></section>
       </main>
 
-      <footer className="site-footer"><div className="section-wrap footer-inner"><a className="brand footer-brand" href="#home"><img src="/logo.jpeg" alt="Logo Handayani Course" /><span>Handayani <strong>Course</strong></span></a><p>Ruang belajar yang hangat untuk tumbuh bersama.</p><span className="footer-small">© 2026 Handayani Course</span></div></footer>
+      <footer className="site-footer"><div className="section-wrap footer-inner"><a className="brand footer-brand" href="#home"><img src={`${import.meta.env.BASE_URL}logo.jpeg`} alt="Logo Handayani Course" /><span>Handayani <strong>Course</strong></span></a><p>Ruang belajar yang hangat untuk tumbuh bersama.</p><span className="footer-small">© 2026 Handayani Course</span></div></footer>
     </div>
   )
 }
@@ -167,7 +167,7 @@ function ModernApp() {
     <div className="modern-site">
       <header className="modern-header">
         <a className="modern-brand" href="#home" onClick={() => go('home')}>
-          <img src="/logo.jpeg" alt="Logo Handayani Course" />
+          <img src={`${import.meta.env.BASE_URL}logo.jpeg`} alt="Logo Handayani Course" />
           <span>Handayani <b>Course</b></span>
         </a>
         <button className="modern-menu-button" type="button" onClick={() => setMenuOpen(!menuOpen)} aria-expanded={menuOpen} aria-label="Buka menu">
@@ -189,7 +189,7 @@ function ModernApp() {
         {!['home', 'program', 'jadwal', 'materi', 'portofolio', 'daftar'].includes(page) && <HomePage go={go} />}
       </main>
 
-      <footer className="modern-footer"><div className="modern-footer-inner"><a className="modern-brand" href="#home"><img src="/logo.jpeg" alt="Logo Handayani Course" /><span>Handayani <b>Course</b></span></a><p>Belajar dekat, tumbuh kuat.</p><span>© 2026 Handayani Course</span></div></footer>
+      <footer className="modern-footer"><div className="modern-footer-inner"><a className="modern-brand" href="#home"><img src={`${import.meta.env.BASE_URL}logo.jpeg`} alt="Logo Handayani Course" /><span>Handayani <b>Course</b></span></a><p>Belajar dekat, tumbuh kuat.</p><span>© 2026 Handayani Course</span></div></footer>
     </div>
   )
 }
